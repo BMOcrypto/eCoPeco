@@ -1,18 +1,18 @@
 /*------------ Variables -----------*/
 
-$brandprimary: #d96528;
-$brandsecondary: #03c1c1;
+$brandprimary: #004987;
+$brandsecondary: #52acf4;
 
 /*------------  Global   -----------*/
 
 body {
-  border: 10px solid #ccc;
+  border: 5px solid #ccc;
   min-height: 100vh;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra",
+    Roboto, "Effra", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  word-spacing: 1px;
+  word-spacing: 3px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -23,13 +23,15 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra", Roboto,
+    "Effra", Arial, sans-serif;
   font-weight: normal;
+  letter-spacing: 3px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 p {
@@ -58,23 +60,25 @@ button {
   cursor: pointer;
   color: black;
   font-weight: 700;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  transition: 0.3s all ease;
+  font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra",
+    Roboto, "Effra", Arial, sans-serif;
+  transition: 0.5s all ease;
   &:hover {
-    background: black;
-    border: 1px solid black;
+    background: $brandsecondary;
+    border: 1px solid white;
     color: white;
   }
 }
 
 button.purchase {
-  background: $brandprimary;
-  color: white;
+  background: white;
+  color: black;
   font-size: 16px;
-  border: none;
+  border: 1px solid #ccc;
   &:hover {
-    background: #c14103;
+    background: $brandsecondary;
+    border: 1px solid white;
+    color: white;
   }
 }
 
@@ -84,7 +88,7 @@ button.pay-with-stripe {
   font-size: 16px;
   border: none;
   &:hover {
-    background: #c14103;
+    background: $brandsecondary;
   }
 
   &:disabled {
@@ -96,9 +100,9 @@ button.pay-with-stripe {
   color: $brandprimary;
   font-size: 20px;
   margin: 5px 0;
-  font-weight: normal;
-  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra", Roboto,
+    "Effra", Arial, sans-serif;
 }
 
 hr {
@@ -110,14 +114,14 @@ label {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
-  letter-spacing: 0.1em;
+  letter-spacing: 3px;
   margin-top: 20px;
   display: inline-block;
 }
 
 input {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra",
+    Roboto, "Effra", Arial, sans-serif;
   font-size: 16px;
   padding: 5px 10px;
 }
@@ -286,7 +290,7 @@ input[type="range"].slider::-ms-fill-upper {
 
 input[type="range"].slider::-ms-thumb {
   box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
-  border: 1.9px solid $brandprimary;
+  border: 1.9px solid #f2ad1c;
   height: 17px;
   width: 17px;
   border-radius: 31px;
@@ -302,3 +306,6 @@ input[type="range"].slider:focus::-ms-fill-lower {
 input[type="range"].slider:focus::-ms-fill-upper {
   background: $brandprimary;
 }
+
+
+

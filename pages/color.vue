@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-store-grid :data="men" />
+    <app-store-grid :data="color" />
   </div>
 </template>
 
@@ -10,11 +10,11 @@ import AppStoreGrid from "~/components/AppStoreGrid.vue";
 
 export default {
   components: {
-    AppStoreGrid
+    AppStoreGrid,
   },
   computed: {
-    ...mapGetters(["men"])
-  }
+    ...mapGetters(["color"]),
+  },
 };
 </script>
 

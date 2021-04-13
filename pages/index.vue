@@ -3,13 +3,10 @@
     <app-textlockup />
     <app-sales-boxes />
     <app-textlockup>
-      <template v-slot:img>
-        <img src="/bag.jpg" alt="bag" />
-      </template>
-      <template v-slot:new>50%</template>
-      <template v-slot:sale>Storewide Sale</template>
-      <template v-slot:collection>Summer</template>
-      <template v-slot:details>All accessories</template>
+      <template v-slot:new></template>
+      <template v-slot:sale></template>
+      <template v-slot:collection></template>
+      <template v-slot:details></template>
     </app-textlockup>
     <app-featured-products />
   </div>
@@ -24,8 +21,8 @@ export default {
   components: {
     AppTextlockup,
     AppSalesBoxes,
-    AppFeaturedProducts
-  }
+    AppFeaturedProducts,
+  },
 };
 </script>
 
