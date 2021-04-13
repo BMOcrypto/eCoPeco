@@ -5,7 +5,6 @@
     </h2>
     <div class="featureditems">
       <div class="item" v-for="product in featuredProducts" :key="product.id">
-        <img :src="`/products/${product.img}`" />
         <h3>{{ product.name }}</h3>
         <h4>{{ product.price | dollar }}</h4>
         <NuxtLink :to="`/product/${product.id}`">
@@ -21,8 +20,8 @@ export default {
   computed: {
     featuredProducts() {
       return this.$store.getters.featuredProducts;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -37,7 +36,7 @@ section {
   .item {
     border: 1px solid #eee2dc;
     box-shadow: 0 3px 10px 0px #eee;
-    border-radius: 40px;
+    border-radius: 3px;
     padding: 10px 20px 30px;
     min-height: 150px;
     justify-self: center;
@@ -47,12 +46,12 @@ section {
 }
 
 h4 {
-  color: #d96528;
+  color: #52acf4;
   margin: 10px 0;
 }
 
 h2 {
-  color: #d96528;
+  color: #52acf4;
   text-align: center;
   overflow: hidden;
 }
@@ -86,10 +85,6 @@ h2 span:after {
       margin-bottom: 10px;
     }
   }
-
-  img {
-    width: initial;
-  }
 }
 
 @media screen and (min-width: 700px) {
@@ -102,10 +97,6 @@ h2 span:after {
     div {
       padding: 40px 50px;
     }
-  }
-
-  img {
-    width: 100%;
   }
 }
 </style>

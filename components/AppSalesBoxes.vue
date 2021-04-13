@@ -15,22 +15,22 @@ export default {
       boxes: [
         {
           icon: "/icon-package.svg",
-          heading: "Free Shipping Globally",
-          details: "Delivery in 4 Days"
+          heading: "Fast Global Shipping",
+          details: "Delivery in 4 Days",
         },
         {
           icon: "/icon-cal.svg",
-          heading: "24/7 Customer Service",
-          details: "Call us any time"
+          heading: "Production Assistance",
+          details: "Call us any time",
         },
         {
           icon: "/icon-service.svg",
-          heading: "Easy Online Returns",
-          details: "Send Within 30 Days"
-        }
-      ]
+          heading: "Easy Online Assistance",
+          details: "How Can We Help?",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -57,7 +57,7 @@ export default {
 
 h4 {
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 3px;
   margin: 0 0 10px 0;
 }
 

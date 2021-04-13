@@ -4,21 +4,31 @@
       <h3>Please enter your payment details:</h3>
       <label for="email">Email</label>
       <br />
-      <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
+      <input
+        id="email"
+        type="email"
+        v-model="stripeEmail"
+        placeholder="name@example.com"
+      />
+      <br />
+
       <br />
       <label for="card">Credit Card</label>
       <br />
       <small>
-        Test using these Stripe test credit card numbers with any CVC, postal code, and expiration date in the future:
+        Test using these Stripe test credit card numbers with any CVC, postal
+        code, and expiration date in the future:
         <ul>
           <li>
             <span class="cc-number">4242 4242 4242 4242</span>
           </li>
           <li>
-            <span class="cc-number">4000 0027 6000 3184</span> (requires authentication, will trigger a pop-up)
+            <span class="cc-number">4000 0027 6000 3184</span> (requires
+            authentication, will trigger a pop-up)
           </li>
           <li>
-            <span class="cc-number">4000 0000 0000 9995</span> (will decline with a decline code of insufficient funds)
+            <span class="cc-number">4000 0000 0000 9995</span> (will decline
+            with a decline code of insufficient funds)
           </li>
         </ul>
       </small>
@@ -30,12 +40,14 @@
         :options="stripeOptions"
         @change="complete = $event.complete"
       />
-      <small class="card-error">{{error}}</small>
+      <small class="card-error">{{ error }}</small>
       <button
         class="pay-with-stripe button"
         @click="pay"
         :disabled="!complete || !stripeEmail || loading"
-      >Pay with credit card</button>
+      >
+        Pay with credit card
+      </button>
     </div>
 
     <div v-else class="statussubmit">
@@ -65,7 +77,7 @@ import { mapState } from "vuex";
 export default {
   components: { Card },
   computed: {
-    ...mapState(["cartUIStatus"])
+    ...mapState(["cartUIStatus"]),
   },
   mounted() {
     // create a PaymentIntent on Stripe with order information
@@ -80,7 +92,7 @@ export default {
       },
       stripeEmail: "",
       error: "",
-      loading: false
+      loading: false,
     };
   },
   methods: {
@@ -89,8 +101,8 @@ export default {
       // pop-up modal if the purchase requires authentication
       this.loading = true;
       handleCardPayment(this.$store.getters.clientSecret, {
-        receipt_email: this.stripeEmail
-      }).then(result => {
+        receipt_email: this.stripeEmail,
+      }).then((result) => {
         this.loading = false;
         if (result.error) {
           // show the error to the customer, let them try to pay again
@@ -114,8 +126,8 @@ export default {
     clearCart() {
       this.complete = false;
       this.$store.commit("clearCart");
-    }
-  }
+    },
+  },
 };
 </script> 
  

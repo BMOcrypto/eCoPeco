@@ -1,11 +1,11 @@
 <template>
   <section>
     <ul>
-      <li>About</li>
-      <li>Company</li>
-      <li>Locations</li>
-      <li>Contact</li>
-      <li>Hours</li>
+      <li><a href="">About</a></li>
+      <li><a href="">Company</a></li>
+      <li><a href="">Locations</a></li>
+      <li><a href="">Contact Us</a></li>
+       <li><a href="">Hours</a></li>
     </ul>
     <ul>
       <li>Twitter</li>
@@ -14,7 +14,7 @@
       <li>LinkedIn</li>
     </ul>
     <ul>
-      <h4>Newsletter:</h4>
+      <h4>Sign up for our sweet newsletter:</h4>
       <input type="text" />
     </ul>
   </section>
@@ -26,11 +26,12 @@ export default {};
 
 <style lang="scss" scoped>
 section {
-  width: 80%;
-  margin-left: 10%;
+  width: 100%;
   padding: 40px 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 2fr);
+  border-top: 5px solid #f2ad1c;
+  margin-top: 25px;
 }
 
 ul {

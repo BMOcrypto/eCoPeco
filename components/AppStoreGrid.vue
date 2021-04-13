@@ -2,11 +2,7 @@
   <div class="storegrid">
     <transition-group name="items" tag="section" class="content">
       <div v-for="item in filteredprice" :key="item.id" class="item">
-        <div class="img-contain">
-          <NuxtLink :to="`product/${item.id}`">
-            <img :src="`/products/${item.img}`" />
-          </NuxtLink>
-        </div>
+        <div class="img-contain"></div>
         <star-rating
           :rating="item.starrating"
           active-color="#000"
@@ -22,8 +18,6 @@
       </div>
     </transition-group>
     <aside>
-      <h3>Special Sale</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero iusto nemo laboriosam perferendis voluptas ullam officiis, quibusdam quas quam eveniet est fugit delectus corporis incidunt nam esse suscipit itaque?</p>
       <h3>Filter by Price:</h3>
       <p style="margin-top: 5px">
         Max Price
@@ -50,24 +44,24 @@ import StarRating from "vue-star-rating/src/star-rating.vue";
 export default {
   props: {
     data: {
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       min: 0,
       max: 200,
-      pricerange: 200
+      pricerange: 200,
     };
   },
   computed: {
     filteredprice() {
-      return this.data.filter(el => el.price < this.pricerange);
-    }
+      return this.data.filter((el) => el.price < this.pricerange);
+    },
   },
   components: {
-    StarRating
-  }
+    StarRating,
+  },
 };
 </script>
 

@@ -1,9 +1,5 @@
 <template>
   <div>
-    <section class="item-contain">
-      <section class="img">
-        <img :src="`/products/${product.img}`" />
-      </section>
       <section class="product-info">
         <h1>{{ product.name }}</h1>
         <star-rating
@@ -14,7 +10,7 @@
           style="margin: 5px 0"
         ></star-rating>
         <h4 class="price">{{ product.price | dollar }}</h4>
-        <p>{{ product.description }}</p>
+        <p>{{ product.ingredients }}</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
         <div class="product-options">
           <div class="quantity">
@@ -31,9 +27,9 @@
         </div>
         <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a size</p>
         <p>
-          Available in additional colors:
+          Minimim Order Quantity:
           <strong>
-            <span :style="`color: ${product.color}`">{{ product.color }}</span>
+            <span :style="`moq: ${product.moq}`">{{ product.moq }}</span>
           </strong>
         </p>
         <p>
@@ -67,7 +63,7 @@ import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 export default {
   components: {
     StarRating,
-    AppFeaturedProducts
+    AppFeaturedProducts,
   },
   data() {
     return {
@@ -75,14 +71,14 @@ export default {
       quantity: 1,
       size: null,
       showSizeRequiredMessage: false,
-      tempcart: [] // this object should be the same as the json store object, with additional params, quantity and size
+      tempcart: [], // this object should be the same as the json store object, with additional params, quantity and size
     };
   },
   computed: {
     ...mapState(["storedata"]),
     product() {
-      return this.storedata.find(el => el.id === this.id);
-    }
+      return this.storedata.find((el) => el.id === this.id);
+    },
   },
   methods: {
     cartAdd() {
@@ -92,15 +88,15 @@ export default {
       }
 
       let item = this.product;
-      item = { 
-        ...item, 
-        quantity: this.quantity, 
-        size: this.size 
+      item = {
+        ...item,
+        quantity: this.quantity,
+        size: this.size,
       };
       this.tempcart.push(item);
-      this.$store.commit("addToCart", {...item});
-    }
-  }
+      this.$store.commit("addToCart", { ...item });
+    },
+  },
 };
 </script>
 

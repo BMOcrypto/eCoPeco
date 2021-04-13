@@ -1,21 +1,12 @@
 <template>
   <footer>
     <section class="callout">
-      <h2>"The surprising styles of Skyline Ivy are advanced for all seasons."</h2>
-      <p>Hansel Andersen</p>
+      <h2>"From start through finish.... thats the Flavorman promise."</h2>
+      <p>- The Flavorman</p>
     </section>
     <app-footer-links />
-    <div class="sarahstuff">
-      <p>
-        This project is
-        <a href="https://github.com/sdras/ecommerce-netlify">open source on github</a>,
-        hosted with
-        <a href="https://bit.ly/2G29YwK">Netlify</a>, and made with love by Sarah Drasner,
-        <a
-          href="https://twitter.com/sarah_edo"
-        >@sarah_edo (twitter)</a> &
-        <a href="https://github.com/sdras">@sdras (github)</a>
-      </p>
+    <div class="lowerfooter">
+      <p>Flavorman 2021</p>
     </div>
   </footer>
 </template>
@@ -25,8 +16,8 @@ import AppFooterLinks from "~/components/AppFooterLinks.vue";
 
 export default {
   components: {
-    AppFooterLinks
-  }
+    AppFooterLinks,
+  },
 };
 </script>
 
@@ -40,21 +31,19 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: black;
   h2 {
     padding: 0 30px;
     text-align: center;
   }
 }
-
-.sarahstuff {
-  background: black;
+.lowerfooter {
+  background: #52acf4;
   width: 100%;
-  padding: 10px 30px;
   color: white;
   text-align: center;
+  height: 25px;
 }
-
 a,
 a:visited,
 a:active {

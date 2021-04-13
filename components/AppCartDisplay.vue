@@ -11,9 +11,7 @@
         </tr>
         <tr v-for="item in cart" :key="item.id">
           <td>
-            <img :src="`/products/${item.img}`" :alt="item.name" class="product-img" />
             <h3 class="product-name">{{ item.name }}</h3>
-            <h5 v-if="item.size" class="product-size">Size: {{ item.size }}</h5>
           </td>
           <td>
             <h4 class="price">{{ item.price | dollar }}</h4>
@@ -70,11 +68,11 @@ import { mapState, mapGetters } from "vuex";
 
 export default {
   components: {
-    AppCard
+    AppCard,
   },
   computed: {
     ...mapState(["cart"]),
-    ...mapGetters(["cartCount", "cartTotal"])
+    ...mapGetters(["cartCount", "cartTotal"]),
   },
   methods: {
     addToCart(item) {
@@ -85,8 +83,8 @@ export default {
     },
     removeAllFromCart(item) {
       this.$store.commit("removeAllFromCart", item);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -122,9 +120,10 @@ th {
 }
 
 .golden {
-  background: #f2eee2;
+  background: #6ba0d1;
   font-weight: bold;
   padding: 10px;
+  color: white;
 }
 
 .product-name,

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Skyline Ivy</h1>
+    <img src= /logo.png alt="Flavorman">
     <nav>
       <ul>
         <li>
@@ -10,10 +10,13 @@
           <nuxt-link to="/all">All</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/women">Women</nuxt-link>
+          <nuxt-link to="/flavor">Flavor</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/men">Men</nuxt-link>
+          <nuxt-link to="/color">Color</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/dryblend">Dry Blend</nuxt-link>
         </li>
         <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
@@ -29,8 +32,8 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["cartCount"])
-  }
+    ...mapGetters(["cartCount"]),
+  },
 };
 </script>
 
@@ -66,7 +69,7 @@ nav {
       a {
         color: black;
         &:hover {
-          color: #c14103;
+          color: #f1ad2c;
         }
       }
     }
@@ -76,16 +79,16 @@ nav {
 .carttotal {
   position: absolute;
   border-radius: 1000px;
-  background: black;
+  background: #004978;
   color: white;
-  font-size: 10px;
+  font-size: 9px;
   padding: 3px;
   top: -18px;
   right: -5px;
   width: 25px;
   text-align: center;
   height: 25px;
-  font-size: 10px;
+  font-size: 11px;
   padding: 6px 10px;
   font-weight: bold;
 }

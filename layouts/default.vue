@@ -15,8 +15,8 @@ import AppNav from "~/components/AppNav.vue";
 export default {
   components: {
     AppFooter,
-    AppNav
-  }
+    AppNav,
+  },
 };
 </script>
 
@@ -24,8 +24,8 @@ export default {
 body {
   border: 10px solid #ccc;
   min-height: 100vh;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra", Roboto,
+    "Effra", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   word-spacing: 1px;

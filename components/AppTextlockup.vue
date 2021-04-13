@@ -1,21 +1,16 @@
 <template>
   <div class="textlockup">
-    <div class="img">
-      <slot name="img">
-        <img src="/shoe1.jpg" alt="shoe" />
-      </slot>
-    </div>
     <div class="new">
-      <slot name="new">New</slot>
+      <slot name="new">FLAVORMAN</slot>
     </div>
-    <div class="sale">
-      <slot name="sale">Men Shoes</slot>
+    <div class="top">
+      <slot name="top"></slot>
     </div>
-    <div class="collection">
-      <slot name="collection">Collection</slot>
+    <div class="middle">
+      <slot name="middle"></slot>
     </div>
-    <div class="details">
-      <slot name="details">Street Style New Fashion</slot>
+    <div class="lower">
+      <slot name="lower"></slot>
     </div>
   </div>
 </template>
@@ -31,26 +26,27 @@ export default {};
   grid-template-rows: 50px 50px 100px 20px 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin-top: 2px;
   .new {
     grid-area: 1 / 1 / 5 / 4;
     font-size: 23vmin;
     color: #efefef;
     text-transform: uppercase;
   }
-  .sale {
+  .top {
     grid-area: 2 / 2 / 3 / 4;
     font-size: 6.5vmin;
-    color: #d96528;
-    font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #004978;
+    font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra", Roboto,
+      "Effra", Arial, sans-serif;
   }
-  .collection {
+  .middle {
     grid-area: 3 / 3 / 4 / 4;
     font-size: 8.5vmin;
-    font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Effra", -apple-system, BlinkMacSystemFont, "Effra", Roboto,
+      "Effra", Arial, sans-serif;
   }
-  .details {
+  .lower {
     grid-area: 4 / 2 / 5 / 4;
     font-size: 2vmin;
     letter-spacing: 0.2em;
@@ -60,7 +56,7 @@ export default {};
     max-width: 950px;
     grid-area: 1 / 3 / 6 / 4;
     img {
-      width: 95%;
+      width: 100%;
     }
   }
 }

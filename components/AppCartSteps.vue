@@ -1,7 +1,9 @@
 <template>
   <section>
     <div class="shopping">
-      <h2 :class="{ active: cartUIStatus === 'idle' && cartCount === 0 }">01</h2>
+      <h2 :class="{ active: cartUIStatus === 'idle' && cartCount === 0 }">
+        01
+      </h2>
       <h4>Shopping Cart</h4>
     </div>
     <div class="checkout">
@@ -22,8 +24,8 @@ import { mapGetters } from "vuex";
 export default {
   computed: {
     ...mapState(["cartUIStatus"]),
-    ...mapGetters(["cartCount"])
-  }
+    ...mapGetters(["cartCount"]),
+  },
 };
 </script>
 
@@ -52,9 +54,9 @@ h2 {
   padding-top: 21px;
   color: #555;
   &.active {
-    background: #d96528;
-    border: 1px solid #d96528;
-    color: white;
+    background: #white;
+    border: 1px solid #52acf4;
+    color: #52acf4;
   }
 }
 
